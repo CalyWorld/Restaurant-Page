@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    border: 2px solid red;
+}
+
+#content{
+    background-color: white;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.icon{
+    padding: 10px;
+}
+.select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.homebtn{
+    margin: 20px;
+    padding: 10px;
+}
+.orderbtn{
+    margin: 20px;
+    padding: 10px;
+}
+.contactbtn{
+    margin: 20px;
+    padding: 10px;
+}
