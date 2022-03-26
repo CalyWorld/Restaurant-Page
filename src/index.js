@@ -2,21 +2,35 @@ import HomePage from "./Pages/HomePage.js";
 import ContactPage from "./Pages/ContactPage.js";
 import OrderPage from "./Pages/OrderPage.js";
 
-const eventListener = () => {
+
+
+const addEventListener = () => {
   const btn = document.querySelectorAll("button");
+ 
   btn.forEach((button) => {
     button.addEventListener("click", (e) => {
       if (e.target.id === "homebtn") {
-        HomePage();
-      } else if (e.target.id === "contactbtn") {
-        ContactPage();
+        document.getElementById("hometitle").style.display = "flex";
+        document.getElementById("ordertitle").style.display = "none";
+        document.getElementById("contact-title").style.display = "none";
       } else if (e.target.id === "orderbtn") {
-        OrderPage();
+        document.getElementById("ordertitle").style.display = "flex";
+        document.getElementById("hometitle").style.display = "none";
+        document.getElementById("contact-title").style.display = "none";
+      } else if (e.target.id === "contactbtn") {
+        document.getElementById("contact-title").style.display = "flex";
+        document.getElementById("hometitle").style.display = "none";
+        document.getElementById("ordertitle").style.display = "none";
       }
     });
   });
 };
 
-HomePage();
+const functionHolder = () =>{
+  HomePage();
+  OrderPage();
+  ContactPage();
+  addEventListener();
+}
 
-eventListener();
+functionHolder();
