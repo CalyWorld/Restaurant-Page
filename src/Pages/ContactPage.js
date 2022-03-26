@@ -8,7 +8,7 @@ const content = () => {
 };
 
 const ContactPage = () => {
-  document.body.append(content());
+  content();
 };
 
 export default ContactPage;
