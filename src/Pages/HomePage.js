@@ -1,24 +1,26 @@
-
-const createHome = () => {
+const createHeader = () => {
   const header = document.createElement("header");
   const iconDiv = document.createElement("div");
-  const selectDiv = document.createElement("div");
+  const ul = document.createElement("ul");
+  const li = document.createElement("li");
   const homebtn = document.createElement("button");
   const orderbtn = document.createElement("button");
   const contactbtn = document.createElement("button");
 
   iconDiv.classList.add("icon");
-  selectDiv.classList.add("select");
-  homebtn.classList.add("homebtn");
-  orderbtn.classList.add("orderbtn");
-  contactbtn.classList.add("contactbtn");
+  ul.classList.add("select");
+  li.classList.add("list");
+  homebtn.setAttribute("id", "homebtn");
+  orderbtn.setAttribute("id", "orderbtn");
+  contactbtn.setAttribute("id", "contactbtn");
 
   header.append(iconDiv);
-  header.append(selectDiv);
+  header.append(ul);
 
-  selectDiv.append(homebtn);
-  selectDiv.append(orderbtn);
-  selectDiv.append(contactbtn);
+  li.append(homebtn);
+  li.append(orderbtn);
+  li.append(contactbtn);
+  ul.append(li);
 
   iconDiv.textContent = "icon";
 
@@ -31,22 +33,29 @@ const createHome = () => {
 
 const content = () => {
   const contentContainer = document.getElementById("content");
-  const title = document.createElement("h1");
-  title.textContent = "Welcome to my Restaurant";
-  contentContainer.append(title);
+  const ContainerDiv = document.createElement("div");
+  const titleName = document.createElement("h1");
+  const imageDiv = document.createElement("div");
+  imageDiv.setAttribute("id", "image-container");
+  titleName.textContent = "Welcome to my Restaurant";
+  ContainerDiv.setAttribute("id", "homecontainer");
+  titleName.classList.add("title");
+  ContainerDiv.append(titleName);
+  ContainerDiv.append(imageDiv);
+  contentContainer.append(ContainerDiv);
   return contentContainer;
 };
 
-const footer = () => {
+const createFooter = () => {
   const footer = document.createElement("footer");
   footer.textContent = "Made by Callistus Anizoba";
   return footer;
 };
 
 const HomePage = () => {
-  document.body.append(createHome());
+  document.body.append(createHeader());
   document.body.append(content());
-  document.body.append(footer());
+  document.body.append(createFooter());
 };
 
 export default HomePage;
