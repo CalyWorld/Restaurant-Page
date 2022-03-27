@@ -1,3 +1,5 @@
+import FrontImage from "./images/front-page.jpg";
+import Icon from "./images/food.png";
 const createHeader = () => {
   const header = document.createElement("header");
   const iconDiv = document.createElement("div");
@@ -22,7 +24,10 @@ const createHeader = () => {
   li.append(contactbtn);
   ul.append(li);
 
-  iconDiv.textContent = "icon";
+  const myIcon = new Image();
+  myIcon.src = Icon;
+  myIcon.setAttribute("id", "icon");
+  iconDiv.append(myIcon);
 
   homebtn.textContent = "Home";
   orderbtn.textContent = "Order";
@@ -36,10 +41,14 @@ const content = () => {
   const ContainerDiv = document.createElement("div");
   const titleName = document.createElement("h1");
   const imageDiv = document.createElement("div");
+  const myImage = new Image();
+  myImage.src = FrontImage;
+  myImage.setAttribute("id", "front-pageImage");
   imageDiv.setAttribute("id", "image-container");
-  titleName.textContent = "Welcome to my Restaurant";
+  titleName.textContent = "Welcome to MI CASA";
   ContainerDiv.setAttribute("id", "homecontainer");
-  titleName.classList.add("title");
+  titleName.classList.add("hometitle");
+  imageDiv.append(myImage);
   ContainerDiv.append(titleName);
   ContainerDiv.append(imageDiv);
   contentContainer.append(ContainerDiv);
