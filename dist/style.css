@@ -1,22 +1,24 @@
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 #content {
   padding: 10px;
+  width: 100%;
   height: 100%;
-  margin: 20px;
 }
 body {
   margin: 0px;
   padding: 0px;
   height: 100%;
-  background-color:rgba(10,14,23,255);
+  background-color: #f7f7f7;
 }
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1px;
+  background-color: #202040;
 }
 .icon {
   padding: 10px;
@@ -29,44 +31,110 @@ header {
   justify-content: center;
   align-items: center;
   list-style-type: none;
+  padding: 5px;
 }
 #homecontainer {
   display: block;
   justify-content: center;
-  padding: 5px;
+  padding: 10px;
 }
-.title{
+.hometitle {
+  display: flex;
+  justify-content: center;
+  background-color: #202040;
+  color: #f7f7f7;
+}
+#ordertitle {
+  background-color: #202040;
+  color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact-title {
+  background-color: #202040;
+  color: #f7f7f7;
   display: flex;
   justify-content: center;
 }
-#ordertitle {
+#ordercontainer {
   display: none;
-  justify-content: center;
-  padding: 5px;
+
+  padding: 10px;
 }
-#contact-title {
+#contactcontainer {
   display: none;
-  justify-content: center;
-  padding: 5px;
+  padding: 10px;
 }
-#image-container{
-  background: url("./images/front-page.jpg");
+#image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 10px;
+}
+#orderimage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 10px;
+}
+#icon {
+  width: 60px;
+}
+#front-pageImage {
+  width: 800px;
+}
+#brookeImage {
+  width: 800px;
+  margin: 5px;
+}
+#jayImage {
+  width: 800px;
+  margin: 5px;
+}
+#lilyImage {
+  width: 800px;
+  margin: 5px;
+}
+#olayinkaImage {
+  width: 800px;
+  margin: 5px;
 }
 #homebtn {
-  margin: 20px;
-  padding: 5px;
+  width: 40%;
+  background-color: #f7f7f7;
+  color: #202040;
+  padding: 8px 16px;
+  margin: 8px;
+  border: none;
+  border-radius: 4px;
 }
+
 #orderbtn {
-  margin: 20px;
-  padding: 5px;
+  width: 40%;
+  background-color: #f7f7f7;
+  color: #202040;
+  padding: 8px 16px;
+  margin: 8px;
+  border: none;
+  border-radius: 4px;
 }
+
 #contactbtn {
-  margin: 20px;
-  padding: 5px;
+  width: 40%;
+  background-color: #f7f7f7;
+  color: #202040;
+  padding: 8px 16px;
+  margin: 8px;
+  border: none;
+  border-radius: 4px;
 }
 footer {
-  /* position: relative;
-  bottom: 0; */
+  background-color: #202040;
+  color: #f7f7f7;
   width: 100%;
   display: flex;
   justify-content: center;
